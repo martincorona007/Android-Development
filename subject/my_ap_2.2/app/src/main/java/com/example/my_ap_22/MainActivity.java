@@ -74,4 +74,5 @@ public class MainActivity extends AppCompatActivity {
             ivat.setText(Double.toString(iva));
             totalt.setText(Double.toString(total));
     }
+
 }
