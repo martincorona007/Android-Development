@@ -22,5 +22,17 @@
     <string name="txt_2"></string>
     <string name="txt_3"></string>
 
+    <string name="title_1">Add Book</string>
+    <string name="title_2">Delete Book</string>
+    <string name="title_3">Update Book</string>
+    <string name="title_4">Add User</string>
+    <string name="title_5">Add Admin</string>
+
+    <string name="btn_save">Save</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_update">Update</string>
+    <string name="btn_saveUser">Add</string>
+    <string name="btn_saveAdmin">Add</string>
+
 
 </resources>
