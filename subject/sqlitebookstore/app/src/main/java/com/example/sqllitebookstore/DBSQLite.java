@@ -11,8 +11,8 @@ public class DBSQLite extends SQLiteOpenHelper {
         super(context,name,factory,version);
     }
     public void onCreate(SQLiteDatabase db){
-        db.execSQL("CREATE TABLE users(name text,email text,types text)");
-        db.execSQL("CREATE TABLE books(name text,isbn text,price real)");
+        db.execSQL("CREATE TABLE users(name text,email text,pwas text,typer text)");
+        db.execSQL("CREATE TABLE books(name text,isbn text,price text)");
 
     }
     public void onUpgrade(SQLiteDatabase db,int oldVersion,int newVersion){

@@ -6,4 +6,21 @@
     <string name="lbl_2">Password</string>
     <string name="txt_em">stg@mail.com</string>
     <string name="pass">*****</string>
+
+    <string name="btn_3">Add Book</string>
+    <string name="btn_4">Delete Book</string>
+    <string name="btn_5">Update Book</string>
+    <string name="btn_6">Add User</string>
+    <string name="btn_7">Add Admin</string>
+
+    <string name="lbl_3">Name</string>
+    <string name="lbl_4">ISBN</string>
+    <string name="lbl_5">Price</string>
+    <string name="btn_8">Back</string>
+    <string name="btn_9">Next</string>
+    <string name="txt_1"></string>
+    <string name="txt_2"></string>
+    <string name="txt_3"></string>
+
+
 </resources>
