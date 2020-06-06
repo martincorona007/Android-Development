@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SQLliteBookStore</string>
+    <string name="btn_1">Sign Up</string>
+    <string name="btn_2">Log In</string>
+    <string name="lbl_1">Email</string>
+    <string name="lbl_2">Password</string>
+    <string name="txt_em">stg@mail.com</string>
+    <string name="pass">*****</string>
+</resources>
