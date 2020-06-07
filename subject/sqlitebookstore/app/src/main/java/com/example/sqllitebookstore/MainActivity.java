@@ -15,8 +15,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText txt_bung,txtparser;
-    private Object view;
 
+    Cursor consultilla;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +39,13 @@ public class MainActivity extends AppCompatActivity {
             register.put("pwas","123456789");
             register.put("typer","admin");
             DB.insert("users",null,register);
+
+            ContentValues register1=new ContentValues();
+            register1.put("name","donquijote");
+            register1.put("isbn","1");
+            register1.put("price","520");
+            DB.insert("books",null,register1);
+
             DB.close();
             Toast.makeText(this, "admin created", Toast.LENGTH_SHORT).show();
         }
@@ -55,16 +62,30 @@ public class MainActivity extends AppCompatActivity {
             }else{
                 Cursor registers=DB1.rawQuery("SELECT * FROM users WHERE email='"+bung+"' AND pwas='"+parser+"'",null);
                 if(registers.moveToFirst()){
-                    DB1.close();
-                    Intent act=new Intent(this,operationsActivity.class);
-                    act.putExtra("login",registers.getString(2));
+                    //consultilla=DB1.rawQuery("SELECT * FROM users WHERE email='"+bung+"' AND pwas='"+parser+"'",null);
+
+                    /*Intent act=new Intent(this,addActivity.class);
+                    //act.putExtra("login",registers.getString(3));
                     startActivity(act);
+                    */
+
+                    Intent act=new Intent(this,operationsActivity.class);
+                    act.putExtra("log",registers.getString(3));
+                    DB1.close();
+                    startActivity(act);
+
                 }else{
                     Toast.makeText(this,"User or password invalid",Toast.LENGTH_SHORT).show();
                     DB1.close();
                 }
+
             }
         }
+    public void signup(View view){
+        Intent act=new Intent(this,userActivity.class);
+        //act.putExtra("typer",consultilla.getString(3));
+        startActivity(act);
+    }
 
 
 

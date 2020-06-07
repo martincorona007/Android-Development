@@ -15,8 +15,6 @@ public class operationsActivity extends AppCompatActivity {
     EditText txt_bung,txtparser,text_1,text_2,text_3;
     String login;
     Button btn1,btn2,btn3,btn4,btn5,btn6,btn7;
-    DBSQLite gestor;
-    SQLiteDatabase DB;
     Cursor consult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +22,7 @@ public class operationsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_operations);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        login=getIntent().getStringExtra("login");
+        login=getIntent().getStringExtra("log");
 
         txt_bung=findViewById(R.id.txt_email);
         txtparser=findViewById(R.id.txt_password);
@@ -54,8 +52,9 @@ public class operationsActivity extends AppCompatActivity {
             btn5.setVisibility(View.INVISIBLE);
 
         }
-        gestor=new DBSQLite(this,"prueba",null,1);
-        DB=gestor.getReadableDatabase();
+        DBSQLite gestor=new DBSQLite(this,"prueba",null,1);
+        SQLiteDatabase DB=gestor.getReadableDatabase();
+
         consult=DB.rawQuery("SELECT * FROM books",null);
         consult.moveToFirst();
         text_1.setText(consult.getString(0));
@@ -68,6 +67,7 @@ public class operationsActivity extends AppCompatActivity {
         startActivity(actvMain);
     }
     public void next(View view){
+
         if(!consult.moveToNext()) consult.moveToLast();
 
         text_1.setText(consult.getString(0));
@@ -84,19 +84,24 @@ public class operationsActivity extends AppCompatActivity {
     }
 
     public void add(View view){
-
+        Intent act=new Intent(this,addActivity.class);
+        startActivity(act);
     }
     public void delete(View view){
-
+        Intent act=new Intent(this,deleteActivity.class);
+        startActivity(act);
     }
     public void update(View view){
-
+        Intent act=new Intent(this,updateActivity.class);
+        startActivity(act);
     }
     public void addUser(View view){
-
+        Intent act=new Intent(this,userActivity.class);
+        startActivity(act);
     }
     public void addAdmin(View view){
-
+        Intent act=new Intent(this,adminActivity.class);
+        startActivity(act);
     }
 
 

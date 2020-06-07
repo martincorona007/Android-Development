@@ -34,5 +34,8 @@
     <string name="btn_saveUser">Add</string>
     <string name="btn_saveAdmin">Add</string>
 
+    <string name="lbl_search">Search</string>
+    <string name="btn_search">Search</string>
+
 
 </resources>
