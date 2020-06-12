@@ -73,21 +73,21 @@ public class MainActivity extends AppCompatActivity {
                 try{
                     a1=true;
                 }catch (Exception e){
-
+                    a1=false;
                 }
             }
             if(txt2.hasFocus()){
                 try{
                     a2=true;
                 }catch (Exception e){
-
+                    a2=false;
                 }
             }
             if(txt3.hasFocus()){
                 try{
                     a3=true;
                 }catch (Exception e){
-
+                    a3=false;
                 }
             }
 
@@ -96,21 +96,21 @@ public class MainActivity extends AppCompatActivity {
                 try{
                     a4=true;
                 }catch (Exception e){
-
+                    a4=false;
                 }
             }
             if(txt5.hasFocus()){
                 try{
                     a5=true;
                 }catch (Exception e){
-
+                    a5=false;
                 }
             }
             if(txt6.hasFocus()){
                 try{
                     a6=true;
                 }catch (Exception e){
-
+                    a6=false;
                 }
             }
 
@@ -119,21 +119,21 @@ public class MainActivity extends AppCompatActivity {
                 try{
                     a7=true;
                 }catch (Exception e){
-
+                    a7=false;
                 }
             }
             if(txt8.hasFocus()){
                 try{
                     a8=true;
                 }catch (Exception e){
-
+                    a8=false;
                 }
             }
             if(txt9.hasFocus()){
                 try{
                     a9=true;
                 }catch (Exception e){
-
+                    a9=false;
                 }
             }
             /*====================================================*/
@@ -143,22 +143,40 @@ public class MainActivity extends AppCompatActivity {
                 if(a2==true){
                     if(a3==true){
                         sect_1=true;
+                    }else{
+                        sect_1=false;
                     }
+                }else{
+                    sect_1=false;
                 }
+            }else{
+                sect_1=false;
             }
             if(a4==true ){
                 if(a5==true){
                     if(a6==true){
                         sect_2=true;
+                    }else{
+                        sect_2=false;
                     }
+                }else{
+                    sect_2=false;
                 }
+            }else{
+                sect_2=false;
             }
             if(a7==true ){
                 if(a8==true){
                     if(a9==true){
                         sect_3=true;
+                    }else{
+                        sect_3=false;
                     }
+                }else{
+                    sect_3=false;
                 }
+            }else{
+                sect_3=false;
             }
             if(sect_1){
                 int a1,b2,sub_total=0,res1;
@@ -244,8 +262,9 @@ public class MainActivity extends AppCompatActivity {
             int a1,b2,a2,b3,a3,b4,sub_total,res1,res2,res3;
             double iva,total;
             for (int i=0;i<=12;i++){
+                txt1.setText("");
                 txt2.setText("");
-                txt3.setText("");txt1.setText("");
+                txt3.setText("");
                 txt4.setText("");
                 txt5.setText("");
                 txt6.setText("");

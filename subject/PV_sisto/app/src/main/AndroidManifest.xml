@@ -9,6 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".homeActivity"></activity>
+        <activity android:name=".delete_Product_Activity" />
+        <activity android:name=".add_user_Activity" />
+        <activity android:name=".add_admin_Activity" />
+        <activity android:name=".update_Product_Activity" />
+        <activity android:name=".add_Product_Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

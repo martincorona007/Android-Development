@@ -1,3 +1,46 @@
 <resources>
     <string name="app_name">PV_sisto</string>
+    <string name="title_addp">Add Product</string>
+    <string name="title_updp">Update Product</string>
+    <string name="title_delep">Delete Product</string>
+    <string name="title_addadmin">Add Admin</string>
+    <string name="title_addemplp">Add Employ</string>
+
+
+    <string name="lb_code">Code</string>
+    <string name="lb_name">Name</string>
+    <string name="lb_price">Price</string>
+
+    <string name="tx_blank"></string>
+
+    <string name="btn_Add">Add</string>
+    <string name="btn_Update">Update</string>
+    <string name="btn_Search">Search</string>
+
+    <string name="btn_Addp">Add Product</string>
+    <string name="btn_Updatep">Update Product</string>
+    <string name="btn_Deletep">Delete Product</string>
+    <string name="btn_Addadmin">Add Admin</string>
+    <string name="btn_Addempl">Add Employ</string>
+    <string name="btn_sell">Sell</string>
+    <string name="btn_cal">Calculate</string>
+
+
+    <string name="btn_1">Sign Up</string>
+    <string name="btn_2">Log In</string>
+    <string name="lbl_1">Email</string>
+    <string name="lbl_2">Password</string>
+    <string name="txt_em">stg@mail.com</string>
+    <string name="pass">*****</string>
+
+    <string name="lbl_s1">0.0</string>
+    <string name="lbl_c1">Quantity</string>
+    <string name="lbl_c2">Article</string>
+    <string name="lbl_c3">Unit Price</string>
+    <string name="lbl_c4">Amount</string>
+
+    <string name="lbl_sb">SubTotal</string>
+    <string name="lbl_iv">IVA</string>
+    <string name="lbl_t">Total</string>
+
 </resources>
