@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class homeActivity extends AppCompatActivity {
     EditText text_1,text_2,text_search,text2,text3,text4,text5,text6,text7,text8,text9;
     String login;
@@ -21,7 +23,7 @@ public class homeActivity extends AppCompatActivity {
     TextView ivat, totalt, subTotalt;
     TextView r1,r2,r3,r4,r5,r6,r7,r8;
     boolean sect_1,sect_2,sect_3,sect_4;
-    boolean add_1,add_2,add_3,add_4;
+    boolean aux_1,aux_2,aux_3,aux_4;
     int iter=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,6 +147,7 @@ public class homeActivity extends AppCompatActivity {
                 enableButtonSearch();
                 Toast.makeText(this, "Product Added", Toast.LENGTH_SHORT).show();
             }else{
+                iter-=1;
                 Toast.makeText(this, "Product do not exist", Toast.LENGTH_SHORT).show();
             }
 
@@ -155,6 +158,93 @@ public class homeActivity extends AppCompatActivity {
         if((sect_1==true&&sect_2==true)&&(sect_3==true&&sect_4==true)){
             btn6.setEnabled(false);
         }
+    }
+    public void calculate(View view){
+
+        int a1=0,a2=0,a3=0,a4=0;
+        double iva,total,sub_total,res1=0,res2=0,res3=0,res4=0;
+        double c1=0,c2=0,c3=0,c4=0;
+        DecimalFormat newFormat = new DecimalFormat("#.##");
+
+        if(iter==1){
+            aux_1=true;
+        }else if(iter==2){
+            aux_2=true;
+            aux_1=true;
+
+        }else if(iter==3){
+            aux_3=true;
+            aux_2=true;
+            aux_1=true;
+
+        }else if(iter==4){
+            aux_4=true;
+            aux_3=true;
+            aux_2=true;
+            aux_1=true;
+
+        }
+        if(aux_1){
+            if(text2.getText().toString().isEmpty()){
+                Toast.makeText(this, "Quantity cannot be empty", Toast.LENGTH_SHORT).show();
+
+            }else{
+            a1=Integer.parseInt(text2.getText().toString());
+            c1=Double.parseDouble(r1.getText().toString());
+            res1=Double.valueOf(newFormat.format(a1*c1));
+            r5.setText(String.valueOf(res1));
+            }
+        }
+        if(aux_2){
+            if(text3.getText().toString().isEmpty()){
+
+                Toast.makeText(this, "Quantity cannot be empty", Toast.LENGTH_SHORT).show();
+
+            }else{
+                a2=Integer.parseInt(text3.getText().toString());
+                c2=Double.parseDouble(r2.getText().toString());
+                res2=Double.valueOf(newFormat.format(a2*c2));
+                r6.setText(String.valueOf(res2));
+            }
+
+
+        }
+        if(aux_3){
+            if(text4.getText().toString().isEmpty()){
+
+                Toast.makeText(this, "Quantity cannot be empty", Toast.LENGTH_SHORT).show();
+
+            }else{
+                a3=Integer.parseInt(text4.getText().toString());
+                c3=Double.parseDouble(r3.getText().toString());
+                res3=Double.valueOf(newFormat.format(a3*c3));
+                r7.setText(String.valueOf(res3));
+            }
+        }
+        if(aux_4){
+            if(text5.getText().toString().isEmpty()){
+
+                Toast.makeText(this, "Quantity cannot be empty", Toast.LENGTH_SHORT).show();
+
+            }else{
+                a4=Integer.parseInt(text5.getText().toString());
+                c4=Double.parseDouble(r4.getText().toString());
+                res4=Double.valueOf(newFormat.format(a4*c4));
+                r8.setText(String.valueOf(res4));
+            }
+
+
+        }
+
+        sub_total=res1+res2+res3+res4;
+        iva=sub_total*0.16;
+        total=sub_total+iva;
+
+
+
+        subTotalt.setText(String.valueOf(sub_total));
+        ivat.setText(newFormat.format(iva));
+        totalt.setText(Double.toString(total));
     }
 
 }
