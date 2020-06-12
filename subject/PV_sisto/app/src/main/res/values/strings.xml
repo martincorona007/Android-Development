@@ -24,6 +24,9 @@
     <string name="btn_Addempl">Add Employ</string>
     <string name="btn_sell">Sell</string>
     <string name="btn_cal">Calculate</string>
+    <string name="btn_viewp">View Products</string>
+    <string name="btn_views">View Sales</string>
+
 
     <string name="btn_1">Sign Up</string>
     <string name="btn_2">Log In</string>

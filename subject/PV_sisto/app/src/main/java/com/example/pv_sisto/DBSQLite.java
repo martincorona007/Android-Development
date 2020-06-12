@@ -11,7 +11,7 @@ public class DBSQLite extends SQLiteOpenHelper {
     }
     public void onCreate(SQLiteDatabase db){
         db.execSQL("CREATE TABLE users(name text,email text,pwas text,typer text)");
-        db.execSQL("CREATE TABLE products(code text,name text,price text)");
+        db.execSQL("CREATE TABLE products(code INTEGER,name text,price REAL)");
         db.execSQL("CREATE TABLE sales_a(ID_ch INTEGER PRIMARY KEY AUTOINCREMENT, subtot REAL,iv REAL,tota REAL)");
         db.execSQL("CREATE TABLE sales_b(FK_ID_ch int,code int,FOREIGN KEY(FK_ID_ch) REFERENCES sales_a(ID_ch)); ");
 

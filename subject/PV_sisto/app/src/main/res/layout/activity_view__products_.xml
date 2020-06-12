@@ -96,6 +96,7 @@
         android:layout_height="wrap_content"
 
 
+        android:onClick="back"
         android:text="@string/btn_8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,6 +110,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        android:onClick="next"
         android:text="@string/btn_9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

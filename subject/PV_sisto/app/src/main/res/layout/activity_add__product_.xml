@@ -92,6 +92,7 @@
         android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="addProduct"
         android:text="@string/btn_Add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
