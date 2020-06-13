@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view_Products_Activity"></activity>
+        <activity android:name=".view_sales_Activity"></activity>
+        <activity android:name=".view_Products_Activity" />
         <activity android:name=".homeActivity" />
         <activity android:name=".delete_Product_Activity" />
         <activity android:name=".add_user_Activity" />

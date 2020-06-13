@@ -246,5 +246,8 @@ public class homeActivity extends AppCompatActivity {
         ivat.setText(newFormat.format(iva));
         totalt.setText(Double.toString(total));
     }
+    public void sellProducts(View view){
+
+    }
 
 }
