@@ -44,6 +44,9 @@ public class add_Product_Activity extends AppCompatActivity {
                 //consulta=DB1.rawQuery("SELECT * FROM books",null);
                 //consulta.moveToLast();
                 DB1.close();
+                text_1.setText("");
+                text_2.setText("");
+                text_3.setText("");
                 Toast.makeText(this, "Product added successfully", Toast.LENGTH_SHORT).show();
             }else{
                 Toast.makeText(this, "Product already register", Toast.LENGTH_SHORT).show();

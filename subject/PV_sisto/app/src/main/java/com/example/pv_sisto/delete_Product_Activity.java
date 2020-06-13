@@ -31,6 +31,7 @@ public class delete_Product_Activity extends AppCompatActivity {
             int consultaTemp = DB1.delete("products "," code='" + s1 + "'", null);
             if(consultaTemp>0){
                 Toast.makeText(this, "Product deleted", Toast.LENGTH_SHORT).show();
+                text_1.setText("");
             }else{
                 Toast.makeText(this, "Product not deleted", Toast.LENGTH_SHORT).show();
             }

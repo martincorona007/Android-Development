@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/background_light"
     tools:context=".homeActivity">
 
     <Button
         android:id="@+id/btn_1"
+        style="@android:style/Widget.Material.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="addProduct"
@@ -23,6 +25,7 @@
         android:id="@+id/btn_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:onClick="deleteProduct"
         android:text="@string/btn_Deletep"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -89,10 +92,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text"
-        android:importantForAutofill="no"
-        android:text="@string/tx_blank"
         android:hint="@string/tx_blank"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:text="@string/tx_blank"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.308"
@@ -502,8 +505,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="viewSales"
-        android:text="@string/btn_views"
 
+        android:text="@string/btn_views"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.705"

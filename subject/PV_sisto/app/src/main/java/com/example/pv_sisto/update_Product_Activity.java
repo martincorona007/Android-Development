@@ -61,7 +61,9 @@ public class update_Product_Activity extends AppCompatActivity {
                 register.put("price",Double.parseDouble(s2));
 
                 DB1.update("products",register,"code='"+store+"'",null);
-
+                text_1.setText("");
+                text_2.setText("");
+                txt1.setText("");
                 Toast.makeText(this, "Product Updated successfully", Toast.LENGTH_SHORT).show();
             }else{
                 Toast.makeText(this, "Product do not exist", Toast.LENGTH_SHORT).show();

@@ -40,7 +40,9 @@ public class add_user_Activity extends AppCompatActivity {
             register.put("pwas",parser);
             register.put("typer","user");
             DB1.insert("users",null,register);
-
+            txt_name.setText("");
+            txt_bung.setText("");
+            txtparser.setText("");
             DB1.close();
             Toast.makeText(this, "User added successfully", Toast.LENGTH_SHORT).show();
 

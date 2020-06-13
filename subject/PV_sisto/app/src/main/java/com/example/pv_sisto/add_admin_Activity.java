@@ -40,7 +40,9 @@ public class add_admin_Activity extends AppCompatActivity {
             register.put("pwas",parser);
             register.put("typer","admin");
             DB1.insert("users",null,register);
-
+            txt_name.setText("");
+            txt_bung.setText("");
+            txtparser.setText("");
             DB1.close();
             Toast.makeText(this, "Admin added successfully", Toast.LENGTH_SHORT).show();
 

@@ -282,10 +282,38 @@ public class homeActivity extends AppCompatActivity {
 
             DB1.close();
 
+            r1.setText("0.0");
+            r2.setText("0.0");
+            r3.setText("0.0");
+            r4.setText("0.0");
 
+            r5.setText("0.0");
+            r6.setText("0.0");
+            r7.setText("0.0");
+            r8.setText("0.0");
 
+            subTotalt.setText("0.0");
+            ivat.setText("0.0");
+            totalt.setText("0.0");
 
+            text2.setText("");
+            text3.setText("");
+            text4.setText("");
+            text5.setText("");
 
+            text6.setText("");
+            text7.setText("");
+            text8.setText("");
+            text9.setText("");
+            text_search.setText("");
+            iter=0;
+            aux_1=false;
+            aux_2=false;
+            aux_3=false;
+            aux_4=false;
+            int a1=0,a2=0,a3=0,a4=0;
+            double iva,total,sub_total,res1=0,res2=0,res3=0,res4=0;
+            double c1=0,c2=0,c3=0,c4=0;
         }
 
     }
