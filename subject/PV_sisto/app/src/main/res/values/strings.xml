@@ -49,5 +49,11 @@
     <string name="lbl_iv">IVA</string>
     <string name="lbl_t">Total</string>
 
+    <string name="lbl_ss1">ID_ch</string>
+    <string name="lbl_ss2">subtot</string>
+    <string name="lbl_ss3">iv</string>
+    <string name="lbl_ss4">tota</string>
+    <string name="lbl_ss5">N pro</string>
+
 
 </resources>

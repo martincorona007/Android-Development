@@ -13,8 +13,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class view_Products_Activity extends AppCompatActivity {
-    Cursor consult;
-    EditText text_1,text_2,text_3;
+
     ListView listViewProducts;
     ArrayList<String> listaInformacion;
     ArrayList<cls_product> listaProducts;

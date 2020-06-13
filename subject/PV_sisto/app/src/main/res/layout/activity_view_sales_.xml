@@ -1,10 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:id="@+id/realitve"
+    android:layout_width="410dp"
+    android:layout_height="600dp"
     tools:context=".view_sales_Activity">
 
+    <ListView
+        android:id="@+id/listViewSales"
+        android:layout_width="377dp"
+        android:layout_height="472dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="113dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/lbl5"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="338dp"
+        android:layout_marginBottom="504dp"
+        android:text="@string/lbl_ss1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/lbl6"
+        android:layout_width="77dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="259dp"
+        android:layout_marginBottom="506dp"
+        android:text="@string/lbl_ss2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/lbl7"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="186dp"
+        android:layout_marginBottom="505dp"
+        android:text="@string/lbl_ss3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/lbl8"
+        android:layout_width="71dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="506dp"
+        android:text="@string/lbl_ss4"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/lbl9"
+        android:layout_width="71dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="286dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="508dp"
+        android:text="@string/lbl_ss5"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+</RelativeLayout>

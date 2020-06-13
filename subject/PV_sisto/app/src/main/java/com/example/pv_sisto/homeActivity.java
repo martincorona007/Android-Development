@@ -2,6 +2,7 @@ package com.example.pv_sisto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,7 +13,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 public class homeActivity extends AppCompatActivity {
     EditText text_1,text_2,text_search,text2,text3,text4,text5,text6,text7,text8,text9;
@@ -24,7 +27,7 @@ public class homeActivity extends AppCompatActivity {
     TextView r1,r2,r3,r4,r5,r6,r7,r8;
     boolean sect_1,sect_2,sect_3,sect_4;
     boolean aux_1,aux_2,aux_3,aux_4;
-    int iter=0;
+    int iter=0,n=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,11 +110,14 @@ public class homeActivity extends AppCompatActivity {
         Intent act=new Intent(this,add_user_Activity.class);
         startActivity(act);
     }
+    public void viewSales(View view){
+        Intent act=new Intent(this,view_sales_Activity.class);
+        startActivity(act);
+    }
     public void searchProduct(View view){
         String is=text_search.getText().toString();
         store=is;
         iter+=1;
-
         if(is.isEmpty()){
             Toast.makeText(this,"Fill is empty",Toast.LENGTH_SHORT).show();
         }else{
@@ -154,6 +160,9 @@ public class homeActivity extends AppCompatActivity {
         }
 
     }
+
+
+
     public void enableButtonSearch(){
         if((sect_1==true&&sect_2==true)&&(sect_3==true&&sect_4==true)){
             btn6.setEnabled(false);
@@ -189,7 +198,7 @@ public class homeActivity extends AppCompatActivity {
                 Toast.makeText(this, "Quantity cannot be empty", Toast.LENGTH_SHORT).show();
 
             }else{
-            a1=Integer.parseInt(text2.getText().toString());
+            n+=a1=Integer.parseInt(text2.getText().toString());
             c1=Double.parseDouble(r1.getText().toString());
             res1=Double.valueOf(newFormat.format(a1*c1));
             r5.setText(String.valueOf(res1));
@@ -201,7 +210,7 @@ public class homeActivity extends AppCompatActivity {
                 Toast.makeText(this, "Quantity cannot be empty", Toast.LENGTH_SHORT).show();
 
             }else{
-                a2=Integer.parseInt(text3.getText().toString());
+                n+=a2=Integer.parseInt(text3.getText().toString());
                 c2=Double.parseDouble(r2.getText().toString());
                 res2=Double.valueOf(newFormat.format(a2*c2));
                 r6.setText(String.valueOf(res2));
@@ -215,7 +224,7 @@ public class homeActivity extends AppCompatActivity {
                 Toast.makeText(this, "Quantity cannot be empty", Toast.LENGTH_SHORT).show();
 
             }else{
-                a3=Integer.parseInt(text4.getText().toString());
+                n+=a3=Integer.parseInt(text4.getText().toString());
                 c3=Double.parseDouble(r3.getText().toString());
                 res3=Double.valueOf(newFormat.format(a3*c3));
                 r7.setText(String.valueOf(res3));
@@ -227,7 +236,7 @@ public class homeActivity extends AppCompatActivity {
                 Toast.makeText(this, "Quantity cannot be empty", Toast.LENGTH_SHORT).show();
 
             }else{
-                a4=Integer.parseInt(text5.getText().toString());
+                n+=a4=Integer.parseInt(text5.getText().toString());
                 c4=Double.parseDouble(r4.getText().toString());
                 res4=Double.valueOf(newFormat.format(a4*c4));
                 r8.setText(String.valueOf(res4));
@@ -242,11 +251,42 @@ public class homeActivity extends AppCompatActivity {
 
 
 
-        subTotalt.setText(String.valueOf(sub_total));
+        subTotalt.setText(newFormat.format(sub_total));
         ivat.setText(newFormat.format(iva));
-        totalt.setText(Double.toString(total));
+        totalt.setText(newFormat.format(total));
     }
     public void sellProducts(View view){
+        DBSQLite gestorr=new DBSQLite(this,"prueba",null,1);
+        SQLiteDatabase DB1=gestorr.getReadableDatabase();
+
+
+        String subT=subTotalt.getText().toString();
+        String iv=ivat.getText().toString();
+        String tot=totalt.getText().toString();
+
+        if(subT.isEmpty()||iv.isEmpty()||tot.isEmpty()||iter==0){
+            Toast.makeText(this,"Can not make a sell",Toast.LENGTH_SHORT).show();
+        }else{
+
+            Cursor consultaTemp;
+
+            ContentValues register=new ContentValues();
+            register.put("subtot",Double.parseDouble(subT));
+            register.put("iv",Double.parseDouble(iv));
+            register.put("tota",Double.parseDouble(tot));
+            register.put("quantit",n);
+            DB1.insert("sales_a",null,register);
+
+
+            Toast.makeText(this, "Sale added successfully", Toast.LENGTH_SHORT).show();
+
+            DB1.close();
+
+
+
+
+
+        }
 
     }
 

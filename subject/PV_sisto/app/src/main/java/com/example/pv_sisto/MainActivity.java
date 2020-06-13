@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         DBSQLite gestor=new DBSQLite(this,"prueba",null,1);
         SQLiteDatabase DB=gestor.getWritableDatabase();
+        SQLiteDatabase DB1=gestor.getWritableDatabase();
 
         Cursor query=DB.rawQuery("SELECT * FROM users",null);
         if(!query.moveToFirst()){
@@ -34,14 +35,16 @@ public class MainActivity extends AppCompatActivity {
             register.put("pwas","12345");
             register.put("typer","admin");
             DB.insert("users",null,register);
-/*
+
             ContentValues register1=new ContentValues();
-            register1.put("code",184);
-            register1.put("name","lonches");
-            register1.put("price",520);
-            DB.insert("products",null,register1);
-*/
+            register1.put("subtot",184);
+            register1.put("iv",56);
+            register1.put("tota",520);
+            register1.put("quantit",1);
+            DB1.insert("sales_a",null,register1);
+
             DB.close();
+            DB1.close();
             Toast.makeText(this, "admin created", Toast.LENGTH_SHORT).show();
         }
     }
